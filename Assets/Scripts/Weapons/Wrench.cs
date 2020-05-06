@@ -42,7 +42,9 @@ public class Wrench : MonoBehaviour
     void Start() {
         player = GameObject.Find("Player");
         isThrown = false;
-    }
+        size = 1;
+        ATK = 0.5f;
+}
 
 
 
@@ -57,9 +59,6 @@ public class Wrench : MonoBehaviour
             if (transform.position.x < 0.0f)
                 Destroy(gameObject);
             transform.Rotate(new Vector3(0, 0, 30.0f));
-            //Debug.Log("Throw towards: " + transform.forward.x + "," + transform.forward.y + "," + transform.forward.z);
-            //isHold = false;
-            //}
             return;
         }
         playerPos = player.transform.position;
@@ -163,11 +162,16 @@ public class Wrench : MonoBehaviour
             roleAnimator = other.collider.GetComponent<Animator>();
 
             // Put the weapon on the player's hand
-            //transform.localScale /= 5.0f;
+            
             transform.rotation = roleRightHand.transform.rotation;
             transform.parent = roleRightHand.transform;
             transform.name = "Weapon";
 
+            //Vector3 scale = transform.localScale;
+
+            //scale.Set(2f,2f,2f);//(scale*size).x, (scale * size).y, (scale * size).z
+
+            //transform.localScale = scale;
 
             float x = roleRightHand.transform.position.x + X_bias;
             float y = roleRightHand.transform.position.y + Y_bias;
