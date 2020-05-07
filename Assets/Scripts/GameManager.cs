@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
 {
     GameObject player;
     GameObject NPCs;
+    public static int rank;
     // Start is called before the first frame update
     void Start()
     {
+        
         player = GameObject.Find("Player");
         NPCs = GameObject.Find("NPCs");
     }
@@ -17,6 +19,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rank = NPCs.transform.childCount + 1;
         NPCs = GameObject.Find("NPCs");
         if (player.GetComponent<PlayerMovement>().health > 0 && NPCs.transform.childCount == 0)
         {
