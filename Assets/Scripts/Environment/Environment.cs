@@ -59,7 +59,7 @@ public class Environment : MonoBehaviour
         GenerateGround();
         GenerateNatureObjects(500);
         GenerateWeaponsOnGround(2000);
-        GenerateNPCsOnGround(0);//10
+        GenerateNPCsOnGround(1);//10
 
         StartCoroutine("PoisonCircle");
     }
