@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rank = NPCs.transform.childCount + 1;
+        
         NPCs = GameObject.Find("NPCs");
+        rank = NPCs.transform.childCount + 1;
         if (player.GetComponent<PlayerMovement>().health > 0 && NPCs.transform.childCount == 0)
         {
             SceneManager.LoadScene("WinScene");

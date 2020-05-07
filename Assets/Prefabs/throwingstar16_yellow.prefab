@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X_bias: 0
   Y_bias: 0
-  size: 5
+  size: 1
   ATK: 0.5
   weaponName: proj
   weaponAnimation: Throw

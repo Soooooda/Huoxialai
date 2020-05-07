@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X_bias: 0.00122
   Y_bias: -0.00124
-  size: 0.001
+  size: 0.5
   ATK: 0.5
   weaponName: Book
   weaponAnimation: Magic

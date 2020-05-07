@@ -59,7 +59,7 @@ public class Environment : MonoBehaviour
         GenerateGround();
         GenerateNatureObjects(500);
         GenerateWeaponsOnGround(2000);
-        GenerateNPCsOnGround(30);//10
+        GenerateNPCsOnGround(0);//10
 
         StartCoroutine("PoisonCircle");
     }
@@ -86,10 +86,15 @@ public class Environment : MonoBehaviour
     }
 
     private void GenerateNatureObjects(int amount) {
-        for(int i = 0; i < amount; i++) {
+        for (int i = 0; i < amount; i++) {
             int type = Random.Range(0, naturalObjectType.Length);
             float x = Random.Range(bounds.min[0], bounds.max[0]);
             float y = 7.0f;
+            if (type == 12 || type == 13)
+            {
+                y = 0.5f;
+            }
+                
             float z = Random.Range(bounds.min[2], bounds.max[2]);
             GameObject newNaturalObject = Instantiate(naturalObjectType[type], new Vector3(x, y, z), Quaternion.identity, Environments.transform);
         }

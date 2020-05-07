@@ -20,10 +20,6 @@ public class WinDisplay : MonoBehaviour
         SoundManager.instance.PlaySingle(BGM);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     public void RestartButtonOnClick()
     {

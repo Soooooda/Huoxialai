@@ -1924,6 +1924,7 @@ GameObject:
   - component: {fileID: 2819105544614146835}
   - component: {fileID: 2819105544614146832}
   - component: {fileID: 143859283656441208}
+  - component: {fileID: 114110296808997352}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Player
@@ -2021,9 +2022,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2819105544614146833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f5cf271aaba34a7e80ba9d99ed6c05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSpeed: 0.06
+  currentWeapon: {fileID: 0}
+  currentShield: {fileID: 0}
+  healthBar: {fileID: 5797247314233826365, guid: 57423da4bcd4f4b3490eff084ae560c9,
+    type: 3}
+  health: 1
+  maxHealth: 1
+--- !u!114 &114110296808997352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819105544614146833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e77b264faea3d94692ec6c0eb6a3e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 0.06

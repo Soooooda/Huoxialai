@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Wrench : MonoBehaviour
 {
-   
+
     //throw star
     //-0.00077
     //0.00049
     //-0.00076
     //90 0 0
     //0.03*3
+
+    public float X_rot;
+    public float Y_rot;
+    public float Z_rot;
+    
     public float X_bias;
     public float Y_bias;
     //public float rotate_bias;
@@ -42,7 +47,6 @@ public class Wrench : MonoBehaviour
     void Start() {
         player = GameObject.Find("Player");
         isThrown = false;
-        size = 1;
         ATK = 0.5f;
 }
 
@@ -164,6 +168,8 @@ public class Wrench : MonoBehaviour
             // Put the weapon on the player's hand
             
             transform.rotation = roleRightHand.transform.rotation;
+            transform.Rotate(new Vector3(X_rot, Y_rot, Z_rot));
+            //transform.rotation += new Vector3(X_rot, Y_rot, Z_rot);
             transform.parent = roleRightHand.transform;
             transform.name = "Weapon";
 
