@@ -171,7 +171,7 @@ public class Wrench : MonoBehaviour
 
             //scale.Set(2f,2f,2f);//(scale*size).x, (scale * size).y, (scale * size).z
 
-            //transform.localScale = scale;
+            transform.localScale *= size;
 
             float x = roleRightHand.transform.position.x + X_bias;
             float y = roleRightHand.transform.position.y + Y_bias;
